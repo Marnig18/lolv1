@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Overlord</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	 <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato+Kaushan+Script" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="jquery.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+<body>	
+
+  <!--begin navbar-->
+  <nav class="navbar navbar-default" id="nav">
+  <div class="container-fluid navstyle">
+    <div class="navbar-header t-font">
+        <h3 id="header-logo">Overlord</h3>
+    </div>
+    <div style="float: right;" class="b-font" id="header-links">
+        <ul class="nav navbar-nav">
+        <li><a class="navcolor" href="home.html" style="color:#FFF;">Home</a></li>
+        <li><a class="navcolor" href="input.html" style="color:#FFF">Recipe Book</a></li>
+         </ul>
+
+     <!-- MODAL START -->
+      <!-- Button trigger modal -->
+     <button type="button" class="btn btn-success btn-lg" id="navSignIn" data-toggle="modal" data-target="#myModal3">
+              Update Info
+            </button>
+            <!-- Modal -->
+          <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title t-font" id="myModalLabel" style="text-align: center;">Update Your Information</h4>
+                </div>
+                <div class="modal-body b-font">
+                    <form>
+                    <div class="form-group" style="text-align: left;">
+                                <label for="name">Name: </label>
+                                <input type="text" class="form-control" id="name">
+                              </div>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="email" >Email address:</label>
+                        <input type="email" class="form-control" id="email">
+                      </div>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="pwd" >Password:</label>
+                        <input type="password" class="form-control" id="pwd">
+                      </div>
+                      <div class="form-group">
+                        <input type="radio" name="gender" value="male"> Male<br>
+                        <input type="radio" name="gender" value="female"> Female<br>
+                      </div>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="pwd">Height (centimeters): </label>
+                        <input type="number" class="form-control" name="quantity" id="height">
+                      </div>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="pwd">Weight (pounds): </label>
+                        <input type="number" class="form-control" name="quantity" id="weight">
+                      </div>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="pwd"> Birthday: </label>
+                        <input type="date" name="bday">
+                      </div>  
+                      <br>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="pwd"> Profile Picture: </label>
+                        <input type="file" name="img">
+                        <br>
+                      </div>
+                      <button type="submit" class="btn btn-default">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+      <button type="button" class="btn btn-danger">Sign Out</button>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Welcome page -->
+
+<container>   
+  <div class="row">
+        <div class="col-md-1"></div>
+        <!-- user info -->
+        <div class="col-md-3 b-font">
+              <h3>User Info</h3>
+              <img src="http://www.surveyadventure.com/paidsurveys/wp-content/uploads/2010/04/blog-gym1.jpg" alt="gym-in-gym" class="img-thumbnail">
+              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. </p>
+        </div>
+        <!-- settings/config options -->
+       <!--  <div class="col-md-2 settings">
+          <p class="t-font">Settings</p>
+            <ul class="home-settings b-font">
+              <li> <a href="Input.html">Recipe Book</li></a>
+              <! <li> <a href="#">Update Info</li></a> -->
+                <!-- <br><br> -->
+              <!-- <button type="button" class="btn btn-danger">Sign Out</button> -->
+            <!-- </ul> -->
+        <!-- </div> -->
+        <!-- main content -->
+        <div class="col-md-7">
+            <div class="page-header t-font">
+              <h1>Welcome User <br>
+              <small>Find new recipes, articles, and your profile here!</small></h1>
+            </div>
+            <div class="boxItem">
+              <div class="row">
+                <div class="col-md-6 b-font">
+                  <h3 id="foodItem">Spaghetti</h3>
+                  <img id="foodgif" src="http://images.media-allrecipes.com/userphotos/250x250/3570996.jpg">
+                </div>
+                <div class="col-md-5 nutrInfo b-font"> 
+               <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit laboriosam laborum, maiores iste iure, atque facere esse. Et at nihil in eos sequi, ipsam eveniet fuga, est veniam expedita quibusdam.</p>
+                </div>
+                </div>
+            </div>
+          </div>
+    <div class="col-md-1"></div>
+  </div>
+</container>
+
+  
+<!-- Footer begin -->
+
+  <footer>
+  <div class="container footercss">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="footer-block">
+          <ul class="list-inline footer-menu">
+            <li><a href="https://github.com/eXo5/luckyoverlord">Developer site</a></li>
+            <li><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="footer-block text-center">
+          <p class="copyright">
+            Copyright 2016 Overlord. All rights reserved.
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="footer-block">
+          <ul class="list-inline pull-right social-icon">
+            <li><a href=""><i class="fa fa-facebook"></i></a></li>
+            <li><a href=""><i class="fa fa-twitter"></i></a></li>
+            <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+  
+
+</body>
+</html>

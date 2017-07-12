@@ -1,0 +1,28 @@
+{
+  "name": "luckyoverlord",
+  "version": "1.0.0",
+  "description": "LuckyOverlord is a recipe sharing app that allows users to create recipe's by ingredients to return aggregated nutritional information for each created recipe. Functionality will scale out.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eXo5/luckyoverlord.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eXo5/luckyoverlord/issues"
+  },
+  "homepage": "https://github.com/eXo5/luckyoverlord#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.9",
+    "passport": "^0.3.2",
+    "sequelize": "^4.2.1"
+  }
+}
