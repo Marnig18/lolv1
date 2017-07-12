@@ -1,0 +1,244 @@
+<nav class="navbar navbar-default" id="nav">
+  <div class="container-fluid navstyle">
+    <div class="navbar-header t-font">
+        <h3 id="header-logo">Overlord</h3>
+    </div>
+    <div style="float: right;" class="b-font" id="header-links">
+        <ul class="nav navbar-nav">
+        <li><a class="navcolor" href="#" style="color:#FFF">Home</a></li>
+        <li><a class="navcolor" href="input.html" style="color:#FFF">Recipe Book</a></li>
+      </ul>
+  <!-- login modal -->
+    <!-- MODAL START -->
+      <!-- Button trigger modal -->
+    <button type="button" class="btn btn-success btn-lg" id="navSignIn" data-toggle="modal" data-target="#myModal">
+      Sign In
+    </button>
+    <!-- Modal -->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title t-font" id="myModalLabel" style="text-align: center;">Login to Overlord</h4>
+                </div>
+                <div class="modal-body b-font">
+                    <form name="login" id="login" class="login">
+                      <div class="form-group">
+                        <label for="email">Email address:</label>
+                        <input type="email" class="form-control" name="email" id="email">
+                      </div>
+                      <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" name="pwd" id="pwd">
+                      </div>
+                      <button type="submit" class="btn btn-default" id="submitButton">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+      <!-- <button type="button" class="btn btn-success navbar-btn">Login</button> -->
+    </div>
+  </div>
+</nav>
+  <!-- begin main content/sign up  -->
+  <div class="jumbotron background" id="mainContent1">
+  <div class="container t-font" id="mainContent" style="text-align: center;">
+    <h2 id="welcomeuser"> Welcome to Overlord </h2>
+    <br> <br> 
+    <p id="purpose"> Track Your Nutrition, Learn New Recipes, Live Simpler</p>
+    <br> 
+  <!-- begin modal -->
+        <button type="button" class="btn btn-success btn-lg" id="navSignUp" data-toggle="modal" data-target="#myModal2">
+              Sign Up
+            </button>
+            <!-- Modal -->
+                <!-- Modal -->
+          <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title t-font" id="myModalLabel" style="text-align: center;">Sign Up to Overlord</h4>
+                </div>
+                <div class="modal-body b-font">
+                    <form>
+                    <div class="form-group" style="text-align: left;">
+                                <label for="name">Name: </label>
+                                <input type="text" class="form-control" id="name">
+                              </div>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="email" >Email address:</label>
+                        <input type="email" class="form-control" id="email">
+                      </div>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="pwd" >Password:</label>
+                        <input type="password" class="form-control" id="pwd">
+                      </div>
+                      <div class="form-group">
+                        <input type="radio" name="gender" value="male"> Male<br>
+                        <input type="radio" name="gender" value="female"> Female<br>
+                      </div>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="pwd">Height (centimeters): </label>
+                        <input type="number" class="form-control" name="quantity" id="height">
+                      </div>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="pwd">Weight (pounds): </label>
+                        <input type="number" class="form-control" name="quantity" id="weight">
+                      </div>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="pwd"> Birthday: </label>
+                        <input type="date" name="bday">
+                      </div>  
+                      <br>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="pwd"> Profile Picture: </label>
+                        <input type="file" name="img">
+                        <br>
+                      </div>
+                      <button type="submit" class="btn btn-default">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- sex, birthday, height, weight, pic -->
+               <!--    <div class="modal fade" id="navSignUp" tabindex="-1" role="dialog" aria-labelledby="signUpLabel">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" id="navSignUp" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <h4 class="modal-title t-font" id="navSignUp" style="text-align: center;">Sign Up to Overlord</h4>
+                        </div>
+                        <div class="modal-body b-font" id="navSignUp">
+                            <form>
+                              <div class="form-group">
+                                <label for="name">Name: </label>
+                                <input type="text" class="form-control" id="name">
+                              </div>
+                              <div class="form-group">
+                                <label for="email">Email address:</label>
+                                <input type="email" class="form-control" id="email">
+                              </div>
+                              <div class="form-group">
+                                <label for="pwd">Password:</label>
+                                <input type="password" class="form-control" id="pwd">
+                              </div>
+                              <div class="form-group">
+                                <label for="age">Age: </label>
+                                <input type="number" class="form-control" id="quantity">
+                              </div> -->
+                              <!-- <div class="form-group">
+                                <label for="pwd">Password:</label>
+                                <input type="password" class="form-control" id="pwd">
+                              </div>
+                              <button type="submit" class="btn btn-default">Submit</button>
+                          </form>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div> -->
+  <!-- end modal -->
+  <br> <br> 
+  </div>
+</div>
+<!-- begin features -->
+<div class="jumbotron" id="mainContent2">
+  <div class="container">
+    <div style="text-align: center">
+     <h2 class="t-font"> Features</h2>
+      <p class="b-font"> Maintaining a healthy diet requires the right information, tools, and support. </p>
+      <p> We aim to provide a holisitic approach for the smart-dieter. </p>
+   </div>
+   <br>
+    <div class="b-font">
+    <div class="row">
+      <div class="col-md-3"></div>
+          <div class="col-md-2">
+            <p>Feature #1</p>
+          </div>
+          <div class="col-md-2">
+            <p>Feature #2</p>
+          </div>
+          <div class="col-md-2">
+            <p>Feature #3</p>
+          </div>
+      <div class="col-md-3"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-3"></div>
+          <div class="col-md-2">
+            <p>Feature #4</p>
+          </div>
+          <div class="col-md-2">
+            <p>Feature #5</p>
+          </div>
+          <div class="col-md-2">
+            <p>Feature #6</p>
+          </div>
+      <div class="col-md-3"></div>
+    </div>
+    </div>
+  </div>
+</div>
+ 
+<!-- begin recipes/nutrition info  -->
+  <div class="jumbotron">
+  <div class="container">
+    <h2 class="t-font" style="text-align: center">Custom Recipes, Detailed Nutritions </h2>
+    <div class="row">
+      <div class="col-md-2"></div>
+          <div class="col-md-2">
+          </div>
+          <div class="col-md-4 b-font">
+            <ul>
+              {{#each meal}}
+                <li>{{this.id}} : {{this.meal_name}}</li>
+              {{/each}} 
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <p class="t-font">Nutrition Info</p>
+          </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+</div>
+<!-- Footer begin -->
+  <footer>
+  <div class="container footercss">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="footer-block">
+          <ul class="list-inline footer-menu">
+            <li><a href="https://github.com/eXo5/luckyoverlord">Developer site</a></li>
+            <li><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="footer-block text-center">
+          <p class="copyright">
+            Copyright 2016 Overlord. All rights reserved.
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="footer-block">
+          <ul class="list-inline pull-right social-icon">
+            <li><a href=""><i class="fa fa-facebook"></i></a></li>
+            <li><a href=""><i class="fa fa-twitter"></i></a></li>
+            <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>

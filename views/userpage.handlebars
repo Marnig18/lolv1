@@ -1,0 +1,134 @@
+<container>   
+  <div class="row">
+        <div class="col-md-1"></div>
+        <!-- settings/config options -->
+        <div class="col-md-2 settings">
+          <p class="t-font">Settings</p>
+            <ul class="home-settings b-font">
+              <li> <a href="Input.html">Recipe Book</li></a>
+              <!-- <li> <a href="#">Update Info</li></a> -->
+        <button type="button" class="btn btn-success btn-lg" id="navSignUp" data-toggle="modal" data-target="#myModal3">
+              Update Info
+            </button>
+            <!-- Modal -->
+                <!-- Modal -->
+          <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title t-font" id="myModalLabel" style="text-align: center;">Update Your Information</h4>
+                </div>
+                <div class="modal-body b-font">
+                    <form>
+                    <div class="form-group" style="text-align: left;">
+                                <label for="name">Name: </label>
+                                <input type="text" class="form-control" id="name">
+                              </div>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="email" >Email address:</label>
+                        <input type="email" class="form-control" id="email">
+                      </div>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="pwd" >Password:</label>
+                        <input type="password" class="form-control" id="pwd">
+                      </div>
+                      <div class="form-group">
+                        <input type="radio" name="gender" value="male"> Male<br>
+                        <input type="radio" name="gender" value="female"> Female<br>
+                      </div>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="pwd">Height (centimeters): </label>
+                        <input type="number" class="form-control" name="quantity" id="height">
+                      </div>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="pwd">Weight (pounds): </label>
+                        <input type="number" class="form-control" name="quantity" id="weight">
+                      </div>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="pwd"> Birthday: </label>
+                        <input type="date" name="bday">
+                      </div>  
+                      <br>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="pwd"> Profile Picture: </label>
+                        <input type="file" name="img">
+                        <br>
+                      </div>
+                      <button type="submit" class="btn btn-default">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+                <br><br>
+              <button type="button" class="btn btn-danger">Sign Out</button>
+            </ul>
+        </div>
+        <!-- main content -->
+        <h1>Welcome {{users.name}} <br>
+      <small>Find new recipes, articles, and your profile here!</small></h1>
+    </div>
+    <div class="boxItem">
+      <div class="row">
+        <ul>
+          {{#each meals}}
+          <li>
+            <div class="col-md-6 b-font">
+              <h3 id="foodItem">{{this.meal_name}}</h3>
+              <img src="http://images.media-allrecipes.com/userphotos/250x250/3570996.jpg">
+            </div>
+            <div class="col-md-5 nutrInfo b-font">
+              <ul>
+                <li>
+                  <p>Total Calories: {{this.calories}} </p> 
+                  <p>Total Fat: {{this.fat}} </p>
+                  <p>Total Protein: {{this.protein}}</p>
+                  <p>Total Carbohydrates: {{this.carbs}}</p>
+                </li>
+              {{/each}}
+              </ul>
+        <!-- user info -->
+        <div class="col-md-2 b-font">
+              <h3>User Info</h3>
+              <img src="http://www.surveyadventure.com/paidsurveys/wp-content/uploads/2010/04/blog-gym1.jpg" alt="gym-in-gym" class="img-thumbnail">
+              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. </p>
+        </div>
+    <div class="col-md-1"></div>
+  </div>
+</container>
+  
+<!-- Footer begin -->
+  <footer>
+  <div class="container footercss">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="footer-block">
+          <ul class="list-inline footer-menu">
+            <li><a href="https://github.com/eXo5/luckyoverlord">Developer site</a></li>
+            <li><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="footer-block text-center">
+          <p class="copyright">
+            Copyright 2016 Overlord. All rights reserved.
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="footer-block">
+          <ul class="list-inline pull-right social-icon">
+            <li><a href=""><i class="fa fa-facebook"></i></a></li>
+            <li><a href=""><i class="fa fa-twitter"></i></a></li>
+            <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
