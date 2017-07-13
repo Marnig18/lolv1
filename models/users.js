@@ -12,6 +12,9 @@
 				type: DataTypes.STRING,
 				allowNull: false
 			},
+			picture:{
+				type: DataTypes.STRING,
+			},
 			sex: {
 				type: DataTypes.ENUM("male", "female")
 			},

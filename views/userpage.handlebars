@@ -79,7 +79,7 @@
         <div class="col-md-3 b-font">
            <h1>{{user.name}} <h1>
               
-              <img src="http://www.surveyadventure.com/paidsurveys/wp-content/uploads/2010/04/blog-gym1.jpg" alt="gym-in-gym" class="img-thumbnail">
+              <img src={{user.picture}} alt="gym-in-gym" class="img-thumbnail">
               <p> {{user.description}}</p>
               <ul>
                   <li>{{user.gender}}</li>
@@ -120,21 +120,22 @@
                             <h3 id="foodItem">{{this.meal_name}}</h3>
                             <img src="http://images.media-allrecipes.com/userphotos/250x250/3570996.jpg">
                           </div>
-                          <div class="col-md-5 nutrInfo b-font">
-                            <ul>
-                              <li>
-                                <p>Total Calories: {{this.calories}} </p> 
-                                <p>Total Fat: {{this.fat}} </p>
-                                <p>Total Protein: {{this.protein}}</p>
-                                <p>Total Carbohydrates: {{this.carbs}}</p>
-                              </li>
-                            {{/each}}
+                            <div class="col-md-5 nutrInfo b-font">
+                              <ul>
+                                <li>
+                                  <p>Total Calories: {{this.calories}} </p> 
+                                  <p>Total Fat: {{this.fat}} </p>
+                                  <p>Total Protein: {{this.protein}}</p>
+                                  <p>Total Carbohydrates: {{this.carbs}}</p>
+                                </li>
+                              {{/each}}
+                            </ul>
+                           </li> 
                           </ul>
-                         </li> 
-                        </ul>
-                  </div>
-            </div>
-          </div>
+                        </div>
+                      </div>
+                    </div>
+                   </div> 
 
     <div class="col-md-1"></div>
   </div>
