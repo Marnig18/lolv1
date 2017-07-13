@@ -14,6 +14,8 @@ module.exports = function(app) {
 	});
 
 
+
+
 //////show userpage
 	app.get("/userpage/:email", function(req, res) {
 		db.User.findOne({
@@ -40,29 +42,30 @@ module.exports = function(app) {
 	});
 
 
-	app.post("/input", function(req, res){
-		db.Meal.create({
-			meal_name: req.body.recipeName,					
-			ingredient1: req.body.ingredient1
-			// ingredient2: req.body.ingredient2
-			// ingredient3: req.body.ingredient3
-			// ingredient4: req.body.ingredient4
-			// ingredient5: req.body.ingredient5
-			// ingredient6: req.body.ingredient6
-			// ingredient7: req.body.ingredient7
-			// ingredient8: req.body.ingredient8
-			// ingredient9: req.body.ingredient9
-			// ingredient10: req.body.ingredient10
-				}).then(function(data){
-					var hbsObject = {
-						meal: data
-					}
-					res.redirect("input", hbsObject);
-					res.end()
-				});
+
+
+	app.post("/userpage/user", function(req, res){
+		console.log("data: " + req.body.email);
+		var email = req.body.email
+		
+		 db.User.findOne({
+		 	where: {
+		 		email: req.body.email
+		 	}
+		 }).then(function(response){
+		 	console.log("response:" + response.email);
+		 	res.redirect("/userpage/" + response.email);
+		 })
+		
+      });
+	
+
+	app.post("/user/new", function(req, res){
+		db.User.Create({
+			
+		}).then(function(data){
+
+		})
 	})
+
 }
-
-
-
-
