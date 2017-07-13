@@ -1,0 +1,255 @@
+<html>
+<head>
+  <title> Overlord</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+   <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Lato+Kaushan+Script" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="jquery.js"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>  
+
+  <!--begin navbar-->
+  <nav class="navbar navbar-default" id="nav">
+  <div class="container-fluid navstyle">
+    <div class="navbar-header t-font">
+        <h3 id="header-logo">Overlord</h3>
+    </div>
+    <div style="float: right;" class="b-font" id="header-links">
+        <ul class="nav navbar-nav">
+        <li><a class="navcolor" href="/" style="color:#FFF;">Home</a></li>
+        <li><a class="navcolor" href="/input" style="color:#FFF">Recipe Book</a></li>
+         </ul>
+
+     <!-- MODAL START -->
+      <!-- Button trigger modal -->
+    <button type="button" class="btn btn-success btn-lg" id="navSignIn" data-toggle="modal" data-target="#myModal">
+      Sign In
+    </button>
+    <!-- Modal -->
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title t-font" id="myModalLabel" style="text-align: center;">Login to Overlord</h4>
+                </div>
+                <div class="modal-body b-font">
+                    <form>
+                      <div class="form-group">
+                        <label for="email">Email address:</label>
+                        <input type="email" class="form-control" id="email">
+                      </div>
+                      <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="pwd">
+                      </div>
+                      <button type="submit" class="btn btn-default">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+      <!-- <button type="button" class="btn btn-success navbar-btn">Login</button> -->
+    </div>
+  </div>
+</nav>
+
+  <!-- begin main content/sign up  -->
+  <div class="jumbotron background" id="mainContent1">
+  <div class="container t-font" id="mainContent" style="text-align: center;">
+  <br>
+    <h2 id="welcomeuser"> Welcome to Overlord </h2>
+    <br> 
+    <p id="purpose"> Track Your Nutrition, Learn New Recipes, Live Simpler</p>
+    <br> 
+  <!-- begin modal -->
+        <button type="button" class="btn btn-success btn-lg" id="navSignUp" data-toggle="modal" data-target="#myModal2">
+              Sign Up
+            </button>
+            <!-- Modal -->
+                <!-- Modal -->
+          <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title t-font" id="myModalLabel" style="text-align: center;">Sign Up to Overlord</h4>
+                </div>
+                <div class="modal-body b-font">
+                    <form>
+                    <div class="form-group" style="text-align: left;">
+                                <label for="name">Name: </label>
+                                <input type="text" class="form-control" id="name">
+                              </div>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="email" >Email address:</label>
+                        <input type="email" class="form-control" id="email">
+                      </div>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="pwd" >Password:</label>
+                        <input type="password" class="form-control" id="pwd">
+                      </div>
+                      <div class="form-group">
+                        <input type="radio" name="gender" value="male"> Male<br>
+                        <input type="radio" name="gender" value="female"> Female<br>
+                      </div>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="pwd">Height (centimeters): </label>
+                        <input type="number" class="form-control" name="quantity" id="height">
+                      </div>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="pwd">Weight (pounds): </label>
+                        <input type="number" class="form-control" name="quantity" id="weight">
+                      </div>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="pwd"> Birthday: </label>
+                        <input type="date" name="bday">
+                      </div>  
+                      <br>
+                      <div class="form-group" style="text-align: left;">
+                        <label for="pwd"> Profile Picture: </label>
+                        <input type="file" name="img">
+                        <br>
+                      </div>
+
+
+                      <button type="submit" class="btn btn-default">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+  <!-- end modal -->
+  <br> <br> 
+  </div>
+</div>
+<!-- begin features -->
+<div class="jumbotron" id="mainContent2">
+  <div class="container">
+    <div style="text-align: center;">
+     <h2 class="t-font"> Features</h2>
+      <p class="b-font"> Maintaining a healthy diet requires the right information, tools, and support. </p>
+      <p> We aim to provide a holisitic approach for the smart-dieter. </p>
+   </div>
+    <div class="b-font">
+    <div class="row">
+      <div class="col-md-3"></div>
+          <div class="col-md-2">
+          <br>
+            <img class="icon icons8-Facebook-Like " id="img-margin" width="50" height="50" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACz0lEQVRoQ+2Z7XHUMBCGn1QA6QAqACoIVABUAFQAVJBQQUIFQAdQAVABUAFQAVABmTfj9eh0K0uKJd/5JvrlnGV5H+/35ogDWUcHwsENSIEmvwH3g30fgTfA94Jnq7f01Mh/R5q/wKMeMEuA6B23gQvgGfALeAAIqtlaCsQEllndG0zsrBkFdHV2M63wYz0EPg/aOF4ziGT/ApwAL4D3rWCWNi3J/Rx4B3wYrpuw7AJEIVmhWU5/twnFDnzE5Pb8ZxZTL42Y+fwG7jgSrgbk5wDgObRFrq+ArpusHhrJaeMVcL4GZ5/Shr6+aq7H+x5+c9oQyJ+hZFHEUuRqslqbVk4b5h8/osp4NkxLkBJtqHB8CbwF5CvNVggS9w+lL1EhqGo2pw2dZ3tKz/b2yRz1ztehaYYgXv9Q+kKFWZUdqbwRV7+l507tUxugD3jlZyGIFXNqfHRdsgxehynxNS0EEwLoPSo2VXh+Ap60BNFZOW2UfJjSPYKRmY71WqgRNTqnlU1PaI5PhxxRKsycfQYyKqMVSMvolwMUhPxRoXxsBbzuraYGal78TVDEUfXfkIu2nP06xdySINbvG+uGKccmUStY7f6c2eTuhxFro8NcG4hAzdGVR8YBRgxSm0uW1kgIspE+1gbiRqw4Ierv2lyylEYmI9aaQCYjlgdSG4KX0oj5htVYWzOx2Ef2GSQZsTyN6Lear1yzN5cjSu5b6FVW14R/XF6NVCNczd4SQaf2JCNWSiM1uaQ3iNe1btRYRu5pJAXihebeIHG0UiOlXn9r+uKBpHJJ2HvYc71BstFqSiMpkF1oxOR066ucs9eE4HhgYROVuY4dP28gyXbaM605IBJAk42W/4IOo9U4bIhJUy1q7WhI59jwrbU27Dw3Wk35iO7ZoLlEqHD8KRhNHG+VPFi4R+YkDbvRKgdS+I792bbk9KMr9Q1I1897jcMPRiOXLSLFMwMamhoAAAAASUVORK5CYII=">
+            <br>
+            <p style="text-align: center;">Easy to use,streamlined data entry</p>
+          </div>
+          <div class="col-md-2">
+          <br>
+            <img class="icon icons8-Search-Filled" id="img-margin1" width="50" height="50" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAC50lEQVRoQ+2a/5VNMRDHv1uBVQFbASpABagAFaACVIAKUAEqWFvBbgeoABVwPk6yJ7JJ3kxyL3n37Jzz/njn3ZvJZzK/MrsH2ogcbIRDlyDhJA8l3ZZ0X9J1SXy/GX47k/RD0ldJHyWdhO+rOEHvidyR9CQAeDYG0EtJQC4qXhCs/lzSo8FdvAtAnNYi4gHBfd4G91lCOW73OLjd8HpWENzodUXbt7AZ3IbNRbchVogZDMDnWuX9p5LejJJYQFD0qqCI4H0h6bNxE8QVz5MccnnWMJRp+V0gWPLDwoprhnkw4mYtEAL7NIuJn5Kw7GjWwe04ySuJkXDLWyFdm04hfagFQmZ5mK2IolGIuCQwGCqV970ZsQaC1Y8zJcN+XDBzyc26jFUDIQPdSxQT2MCtIbhYmgA+dRTaYq9Fyvye7fiuIzt5YUunvysJXdBReiHPVNQJAn9NocKndcadwUogeZBTrPDlNYViS9GN4g76Ekjus2u6Vdx47l7umCyBkBJjK46iriziPL48FZPi0WuWEsiv7G134Jm1//3gkN5Ng3CsNxJj/Q/XcmfKTQf7DOnXnfItBZFiddQZwNbXvmRFd5GCOEOLctU7cbE2jRRJCuMaQpedNqTuqs6mNt/GA7n2xarU9Xa18K0T4Tc6XmpKfh3FxUZvibQkuBTxGIVrNDq58rplV/tRGz6MjHBqoyUuc2SrLtkFwqK1qQcJgPGnZxzElLJ108SdGdq5xQLSguG3OKTGorhHOqDDLeOAzno564KxgrBhNoSSNGbcljO+4IbxgMQEwLQwHxMZ93f+GLUCaa3jgvGCxJ2QdQBKJy0WGADYYIyrUopP1zHD9IJEZaRPgjf9Q0+8AsR4IWb4xCF3DrwIzCiI5RQszwzDzAIC7BDMTCBDMLOBdMPMCNIFMyuIBYZWhrj6IzODtGAuXL5mBynBFG+Q+wCSwlSvwfsCAgz/pHAeE3mV3SeQZodwCWJpoP7lM78BA82jMzUV/gIAAAAASUVORK5CYII=">
+            <br>
+            <p style="text-align: center;">Discover Nutrients for 50000+ foods</p>
+          </div>
+          <div class="col-md-2">
+          <br>
+          <img class="icon icons8-Login-As-User" id="img-margin2" width="50" height="50" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAENUlEQVRoQ+3ZgbHcRAwGYKUCoAKgAqACQgWQCkgqIFQAVABUAFQAVJBQQZIKgAoIFcB8N/vf7HNsr893jzwypxmPz++8kn790kp77169IXLvDcFRVyB3jckrI1dGbikC19S6pcDuVjvHyNtV9UFV3a+q9yZXb+iPqsr1vKp+qyr3U+TDqvq4qtx7W0t22HtaVS+q6mX/UoBQ9Hlz3ue9QvkvVfVTC8bD5iR9QH5XVX82W59VlaDtFfqAYus5IM86Y1Ga6Hq5j3xvFGCOuLsw+O6JXgHFGXZcAjFltWcqtrDYywHIP+0v3zelIrpXGMLCF03Bo8aQRwz80Nn6cUcq9n7RJ3gHWz0QkfhoL4LJugRnWoNLf99r9phNDEH2c9N0qe34vwISOw/iuDyVd/8nIOrzr7Zb3p8C+aTVyV6qrYuBv2d2JcX8VlW9M90+dxhUH0+mQGyLiubLtkXu0HtcklS18zHWS5i/RMAeV9W3VWWTehxGYpwhRs6RBOWbqvp6osjzVzF+jpHGhkA9sDMGiHTQL9D+fvu81468pW8u6kkHKSa99ore8ntVSV+fX/bFnUiew0oiboRYmhBs80agOca2AlMbgnJIq/SRLO5Z0aw0s1Mk0bZmrQa2vrdkW1PVdI9sTIF47nuKDq/4pdxIbBQYJccorSwK+14RUWtGIoUUNx+BAOY4hcz1DSkhvdRLhkDPANmJSCZk73KEEWKAY2CLYN2gSugGTtr1k63eRjcWM2QC4fnGTLbUAC2W7zE0cszwB9CpcxrnANg6bAoUv17JklEnByjDGRYydYpKJlZsnQpgGpjYyHQrG4gMkBWxsZjmIyAjJu7M91cgC1RIRZ07BZ9TYXan9BaFro9s2RE3sX5JRoBwPth6fJX7zj8XAbMFCMd0UgbNNUuSbmv7VLwcdc+85W5ToM9ddx9NEc5JAqTB3vixYerECEhASIm5sTz60q1vdNsV0P0UsTYFZOwfnl5HQDI78WlNWY6cpxwDMoZv0cv+6mw2ApLzQ4I7dyCKQ5piOvymAm3pqhnOBSATbnTNnW+OdkZAcib+tao+bawYJkVReuj8mbEO54KtCNp7/WwnIDq3dJLKhkP32LZk0d8REAUuYvKYwwp0TpZSCtj8sAHoXMGG0Tm9Ng7f20hWGR8ByWAn0pigVGFnVEG3OpKCU5EaQKR3YBGYue2WTnp6vXQKHmYwtzqQjoBwhgNmH4YU3EiwoCkeDjxtmnUPm5yjZ3U7bWvpYdduKCBnzVq6dH4hzLjd/2ANrPTLgCl6kf5s0p9BfI9lF53SJk7mh+3+eCAbZMeijBjJQtRTdO64DSxANo4tAqBAzqXujfVbgWQRpfl3w3SkzyFMlEdpI/0wl8MSFvrRPf8+WGWhR3IqkC1RfC3vXIG8lrBfoNjvmt+v+HNNrbtG0ZWRKyO3FIF/Ad7jCl/54BotAAAAAElFTkSuQmCC">
+          <br>
+          <p style="text-align: center;">Log Personal Biometrics</p>
+          </div>
+      <div class="col-md-3"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-3"></div>
+          <div class="col-md-2">
+          <br>
+          <img class="icon icons8-Chili-Pepper-Filled" id="img-margin3" width="50" height="50" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAEk0lEQVRoQ9WagbEMQRCG/xcBIkAEiAARIAJEgAgQASJABIgAESACRIAIqO9q/qu+vpnZube73rupeuVub7an/+7+u3tmnOi4xn1JjyVdl/RV0g2rf3JEOF5LehD0/VYAbR4dCxCD+FM88iY74BiA3JX0ThIgbpWQ2gukYwDyXdIVSU8kvWxR4TwDgdh4AF78LGCalD6PQC5K+hiJLOl38cgeN06TtUh5kI6xTXszsx5KPyqWRz7fUZp/8QKKE1Z4h+es+6O25qhHIBwgvADCpwYEZV4LNIpjeWS2xqfyg0HylfoBwFfxpREgxKg9wbtd0hXhkBJL23ssHscIiClDIfN28dRkHWHBL0EiKRAr4+bWgKBY2oPFbFk/43fmzR3b6j7lEac+L/g2VdeaIlaSGL8s6bmkZ2FiBjoXzCZCekAcUngB5Dcl3ZP0vrOyPQgIeIU3IefV8M5S3rDIjVd6QAgHlAfx00JKFKpmjSKVhu5FISKfWeRa4FXm21xv+P2THpBfQXlCjOH5JisgY24nhAD9sDyPYQQo3ltjdIH8DcpD7guSLhWiu/9hSgw3ZysD4Xe8wHPeX2t0gUTlsfqdQNwYInFfYI9kggMggl8S0KadH+EIFocXMQ1nRSzHAD8UxeO8tfixyaQ9ICauUy4WxTMOEcLHhdJyqDHwCW8ShnEsna0sexPaPSBWihfMDT5DWDzE73hpZ6cmKXLLi0VZS4bVNgFNFUQ8QMNGX4OHaqGSi6SLKD2WW5PYsiwJZBvCU0CiJXMNqRGbBpC0vbVUSeGA6zWHpwW3zY5TQFjA1qRA0jd5mLxYHYHwAs5QO6KX1iL5Tt83AgRLwglIHusDgFy5o0VzY5n7tdNaP7+3E9IjQBDgGoDVCTF3v4DEY/zOM7xGyLmNWcsb6BQ5ONnGRyu496JpJOWNjLW8kTNlEwiWpvnD0t5eQnxCiRCr7TEysDW9sdeF10Irb/6jC52pMvFr3lnLG59rm7IakHw0GedE4ve8YsAj4XfonOq6GUitAuc5Tset3SJg16obVW/EomWruJKjJKBqu0LvMVpCOT2BW0sP0rrboz3Z2drOTLgPIITZzmlFiU8awBqQtVp1FD/oyDTuCqkFLniu3jzzKWAWfCYhZddkj+TOFVcSbuy749jL4+XEfK2QmjqC2qsjWJwjnJhysTSdL3WBzxREvsezLe9d1uBF8yohLpY9gpJsaXNP1VMwH+ItCWZYjwwk7wqnlFri6LO1xjCIWvrtbVXzgrXj/yngo78fBKIGhGc1npxrEC0gLootq6zlieZF54gba72W+6TaPh1O+N5jRP7oHJ8V5+uH0ferbXyrBYmXPcMLDEzkAIHU3ruqmBRT80gGQihxnptPUSaFT0yYFUpZdg2IN0Q0jvCFfmvkqu0QYMiOW+JD3q3OrQEx2X0IN3uRIIBGEwD5Bmv2GhnI0rdJVnA1AF7AQLxHj/9pZa6V4AAtDx5e3AMtjnCGu9QlDFkIAPzNykSHWNIecTU/5F3PpaUn/6M4lv9vykdl43UAJPT2NgPyhSjPUdqbLj6fieJZwX9CfiNCTU3fewAAAABJRU5ErkJggg==">
+          <br>
+            <p style="text-align: center;"> Create Custom Recipes, with Nutrientional Data</p>
+          </div>
+          <div class="col-md-2">
+          <br>
+          <img class="icon icons8-Restaurant-Menu-Filled" id="img-margin4" width="50" height="50" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAACL0lEQVRoQ+2Z8TXEQBCHf1cBKkAHVMB1oAQqQAWogA7oABWgAlSACuiA993LvLfykuyuy9ztRfafvJdMsvPNzO5MZicayJgMhEMjSGmeDD1yIOlY0v6cSj5KupDEtWm4zGMg15IO5wSovw7Mee2m2zyAYKHbniHsc9PAM67zAEII7DmBPAWh6joPIN9OEPZZC1/Xef4dyKukkyoMifUrSZuJnizGIx+SdiR9BYqvS3qXtJYAUwxIuPOEerNds53GRhvIrqSX2MuVEZ8rOXsHw9q92aPYGsEbWx2T4ZVYiBUB0pTUQi7WCtVA1ygitNrCyhSnnHlYBZCN2iKv60zYva0CSEqZH0t0RayRwYBsV/miLXpWJrROqyzeBkK2v1yFNUI2xythVje9ye4sdK7Fb78oSPY9qmVhMitZnWtsFLHYTUkyOJ6xgSe6Mn4IVxSIlTOmYGzLTQGJeTLreazWalKIeyNIlpkzhJfpkYWW8Z6hNRiQjMCJiy4ztOLaZUiMIJnGatqyB7NGlg5CkfjZg0cyPhEXzVkj9v+e8p9edIlyU1XBdO7pNqaOIrooqcp2yY0gOVb0Ph8Jy/+cijmHAdl77xOrRYFMLX456zvLNUOivPcambV1w74V2ypAfR/DeYFwrIe+s9PjlAZcouF/ifE/z7EDXg5BaC/dRXplf5nPDcSUwWJ2RE0PjO69y/DyiCmLZ+jAMChtmvpjvYB5g/SiZMpHRpAUKy1SZjAe+QGD1bgEy8tpaQAAAABJRU5ErkJggg==">
+          <br>
+            <p style="text-align: center;">Save and Discover New Recipes</p>
+          </div>
+          <div class="col-md-2">
+          <br>
+          <img class="icon icons8-Learning-Filled" id="img-margin5" width="50" height="50" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADSklEQVRoQ+2ajZFMQRDH/xcBIuAiQASIgIsAESACRIAIuAgQASJABIgAEVA/NbP1dnY+unf6sbWlq9RyN6+nf9Ofb9aJjkROjoRDESDXJN2QxOeV9HmxOKAfkj5Jyp/vJX2IPMR9QTD4gaQ7yfh9bXoj6YUkwKbECwLAY0n3pnbdffirpPszQB4QPPBEUhk2kUx4CCBC0CVWkJcreKFlKLl0ywtjAfmbEBkOj5x6YEYg0RB5v1+GuHF5pgdCQgMyI28l3ZR0ISkpQX6mBL/d2ISK9tBiQAuEhP4ymdhAUJ7pLxSJ54uqBBwG8nNOniRvwVxPa7o8LZBXku5aTqKzhjgnaTG0J4C+6xwaPQY9bhB6Bd6IkOwVdD1LHuLvHNTTtEHPG9mGoVdqHsHdNL0I4SQ5UcKKPrQUQNiLMMMjPRnmSg0Eb+CVGSn1fq+EDt2cEruUVjUjTC/1DCo3jAqrUi+G5MqV7flWObBeWe6GV7khlYRYtsqoL+TQqoWrJ7SwJ6+v2laC1GJ5+aC3LyyTHZg8bJLs/BuxJDvrlrp2YEoQEpN3i5p4+wJJzB9L+WXfMvRKG9BDeJk80kt0b1/AuLPUEKmCeDu/THFYhDHhgoGvF6W5F9YkfHUyLj0ymoG8fYGwwSt59C9zCqMAZgKwSDNPvCCzfWFUHCwwlGxK95ZYQaL7gsXg1hq8TMh2QWr1ngfW6AszMDkyNjo8VYuHIvvCDMjOVFCCjGp6ZF+YAeHZR6kS/tHj6ey8BEX2hVmQrdfhEoR3g4+NHXKSsSaqL8zCbKbi2vRL/F3uwET2hVmQzVQ8+z4S0RdmYM7z/FYDiRrlZwwcPUu+MvLkwbN5iT2agkcbrfX7DIB9WzNX7xaFXBlNpGsZ3NJrHhqXCiLutaJBm/dwo5vG3vtJtJEWfXuDWG44LAZErdkbBAMOyStTIIeUK1MgeKU13keFjEUPpbf5JdMo2fMGo6nYYsjsGtctSmsz733XrNG15/lKjmukqlg98q+rV+1WcgvICtIb79c4/aVO03uQFQTFo6uiNYDwBFdFo0s+1/98WAskX9pRka5K+pyueygwzZwoT+0QPOKxoel1j5K1POKx4T/I8gSOxiNrVKUwnb8BuA3LM6VbxqEAAAAASUVORK5CYII=">
+          <br>
+            <p style="text-align: center;">Learn Step-by-Step how to make Recipes</p>
+          </div>
+      <div class="col-md-3"></div>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- begin recipes/nutrition info  -->
+ <div class="jumbotron" id="mainContent3">
+  <div class="container">
+    <h2 class="t-font" style="text-align: center;">Custom Recipes, Detailed Nutritions </h2>
+    <div class="row">
+      <div class="col-md-2"></div>
+          <div class="col-md-2">
+          </div>
+          <div class="col-md-4 b-font">
+          <ul>
+              {{#each meals}}
+                <li>{{this.id}} {{this.meal_name}}</a></li>
+              {{/each}} 
+              {{!--   <li>Recipe 1</li>
+                <li>Recipe 2</li>
+                <li>Recipe 3</li>
+                <li>Recipe 4</li>
+                <li>Recipe 5</li>
+                <li>Recipe 6</li>
+                <li>Recipe 7</li>
+                <li>Recipe 8</li>
+                <li>Recipe 9</li>
+                <li>Recipe 10</li> --}}
+            </ul>
+
+          </div>
+          <div class="col-md-4">
+            <p class="t-font">Nutrition Info</p>
+          </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer begin -->
+
+  <footer>
+  <div class="container footercss">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="footer-block">
+          <ul class="list-inline footer-menu">
+            <li><a href="https://github.com/eXo5/luckyoverlord">Developer site</a></li>
+            <li><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="footer-block text-center">
+          <p class="copyright">
+            Copyright 2016 Overlord. All rights reserved.
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="footer-block">
+          <ul class="list-inline pull-right social-icon">
+            <li><a href=""><i class="fa fa-facebook"></i></a></li>
+            <li><a href=""><i class="fa fa-twitter"></i></a></li>
+            <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

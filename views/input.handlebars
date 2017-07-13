@@ -1,0 +1,499 @@
+
+ 
+
+<!--begin navbar-->
+  <nav class="navbar navbar-default" id="nav">
+  <div class="container-fluid navstyle">
+    <div class="navbar-header t-font">
+        <h3 id="header-logo">Overlord</h3>
+    </div>
+    <div style="float: right;" class="b-font" id="header-links">
+        <ul class="nav navbar-nav">
+        <li><a class="navcolor" href="home.html" style="color:#FFF;">Home</a></li>
+         </ul>
+      <button type="button" class="btn btn-danger">Sign Out</button>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Welcome page -->
+<container>   
+  <div class="row">
+        <div class="col-md-1"></div>
+        <!-- settings/config options -->
+        <div class="col-md-2 settings">
+          <div class="row"> 
+            <div class="col-md-12">
+              <p class="t-font">Settings</p>
+              <ul class="home-settings b-font">
+                <li> <a href="/">Home</li></a>
+                <li> <a href="#">Link</li></a>
+                <li> <a href="#">Sign Out</li></a>
+              </ul>
+            </div>
+          </div>
+        <!-- recipe buttons -->
+              <div class="row"> 
+                <div class="col-md-12 b-font">
+<!--                 <a href="#" class="btn btn-default btn-lg active" role="button">Search Foods</a>
+ -->
+              <button type="button" class="btn btn-success" id="navSignUp" data-toggle="modal" data-target="#myModal5">Search Foods </button>
+                                <!-- Begin Modal -->
+                                    <!-- Modal -->
+                              <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                      <h4 class="modal-title t-font" id="myModalLabel" style="text-align: center;"> Search Foods</h4>
+                                    </div>
+                                    <div class="modal-body b-font">
+                                        <form>
+                                        <div class="form-group" style="text-align: left;">
+                                                    <label for="name">Search : </label>
+                                                    <input type="search" class="form-control" id="Sitename">
+                                                  </div>
+                                          <button type="submit" class="btn btn-default">Search</button>
+                                      </form>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                <br><br>
+                 <button type="button" class="btn btn-danger">Sign Out</button>
+                </div>
+              </div>
+        </div>
+        <!-- main content --> 
+                <div class="col-md-8">
+          <div class="jumbotron">
+            <div class="container">
+              <!-- begin fist row content -->
+                <div class="row"> 
+                  <div class="col-md-12 b-font">
+                  <button type="button" class="btn btn-success">Undo</button>
+                  <button type="button" class="btn btn-danger">Save Recipe</button>
+                  </div>
+                 </div>
+            <!-- first inputs -->
+                 <div class="row"> 
+                  <div class="col-md-6">
+                    <div class="row">
+                      <div class="col-md-12 b-font">
+                        <br>
+                        <h5>Recipe Name: </h5>
+                        <input type="text" name="recipeName">
+                        <br>
+                      </div>
+                    </div> 
+                    <!-- second input -->
+                    <div class="row">         
+                      <div class="col-md-6 b-font">
+                        <br>
+                        <h5>Serving Size: </h5>
+                        <select class="form-control">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                          <option>6</option>
+                          <option>7</option>
+                          <option>8</option>
+                          <option>9</option>
+                          <option>10</option>
+                        </select>
+                        <br>
+                      </div>
+                    </div>
+                    <!-- third input ingredient list -->
+                   <div class="row">         
+                      <div class="col-md-6">
+                        <h5 id="ingredients">Ingredient List:   </h5>
+                          <div id="ingredients"></div>
+                      
+                        <!-- ingredient button prompts modal -->
+                          <div class="row"> 
+                            <div class="col-md-12">
+                            <!-- button/modal adds ingredients to recipe table list -->
+                              <button type="button" class="btn btn-success" id="navSignUp" class="addBTN" data-toggle="modal" data-target="#myModal4">
+                                    Add Ingredient
+                                  </button>
+                                  <!-- Modal -->
+                                      <!-- Modal -->
+                                <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModal4">
+                                  <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title t-font" id="myModalLabel" style="text-align: center;"> Add Ingredient to Recipe</h4>
+                                      </div>
+                                      <div class="modal-body b-font">
+                                          <form method="POST" method="/api/meals">
+                                          <div class="form-group" style="text-align: left;">
+                                                      <label for="name">Ingredient : </label>
+                                                      <input type="search" class="form-control" id="ingredient">
+                                                    </div>
+                                            <button type="submit" class="btn btn-default">Search</button>
+                                        </form>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+
+                           <!--  <button type="button" class="btn btn-success" i>Add Ingredient</button> -->
+
+
+
+                            <br><br>
+                            <!-- button makes api call -->
+                            <button type="button" class="btn btn-danger">Make Recipe</button>
+                            </div>
+                           </div>
+                        <br>
+                        <i> Must have added all ingredients to table to 'Make Recipe' and get nutritional info</i>
+                        <br>
+                        <br>
+                          <table class="table table-striped">
+                              <tr>
+                                <th>Description</th>
+                                <th>Amount</th>
+                                <th>Calories</th>
+                                <th>Weight</th>
+                              </tr>
+                              <tr>
+                                <td>Spaghetti</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>Meatballs</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                          </table>                     
+                        <br>
+                      </div>
+                    </div>
+                  <!-- fourth table of general nutritional info -->
+                    <div class="row">         
+                      <div class="col-md-12">
+                          <table class="table table-striped">
+                              <tr>
+                                <th>General Nutrients</th>
+                                <th>Amount</th>
+                                <th>%DV</th>
+                              </tr>
+                              <tr>
+                                <td>Carbs</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>Fats</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>Proteins</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>Calcium</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td>Vitamin A</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                          </table>                     
+                        <br>
+                      </div>
+                    </div>
+                    <!--end of first half  -->
+                 </div>
+                    <!-- begin second half of page |nutrtional label begin -->
+                    <div class="col-md-6">
+                      <div class="row">
+                          <section class="performance-facts">
+                            <header class="performance-facts__header">
+                              <h1 class="performance-facts__title">Nutrition Facts</h1>
+                              <p>Serving Size 1/2 cup (about 82g)</p>
+                              <p>Serving Per Container 8</p>
+                            </header>
+                            <table class="performance-facts__table">
+                              <thead>
+                                <tr>
+                                  <th colspan="3" class="small-info">
+                                    Amount Per Serving
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th colspan="2">
+                                    <b>Calories</b>
+                                    200
+                                  </th>
+                                  <td>
+                                    Calories from Fat
+                                    130
+                                  </td>
+                                </tr>
+                                <tr class="thick-row">
+                                  <td colspan="3" class="small-info">
+                                    <b>% Daily Value*</b>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th colspan="2">
+                                    <b>Total Fat</b>
+                                    14g
+                                  </th>
+                                  <td>
+                                    <b>22%</b>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="blank-cell">
+                                  </td>
+                                  <th>
+                                    Saturated Fat
+                                    9g
+                                  </th>
+                                  <td>
+                                    <b>22%</b>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="blank-cell">
+                                  </td>
+                                  <th>
+                                    Trans Fat
+                                    0g
+                                  </th>
+                                  <td>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th colspan="2">
+                                    <b>Cholesterol</b>
+                                    55mg
+                                  </th>
+                                  <td>
+                                    <b>18%</b>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th colspan="2">
+                                    <b>Sodium</b>
+                                    40mg
+                                  </th>
+                                  <td>
+                                    <b>2%</b>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th colspan="2">
+                                    <b>Total Carbohydrate</b>
+                                    17g
+                                  </th>
+                                  <td>
+                                    <b>6%</b>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="blank-cell">
+                                  </td>
+                                  <th>
+                                    Dietary Fiber
+                                    1g
+                                  </th>
+                                  <td>
+                                    <b>4%</b>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="blank-cell">
+                                  </td>
+                                  <th>
+                                    Sugars
+                                    14g
+                                  </th>
+                                  <td>
+                                  </td>
+                                </tr>
+                                <tr class="thick-end">
+                                  <th colspan="2">
+                                    <b>Protein</b>
+                                    3g
+                                  </th>
+                                  <td>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            
+                            <table class="performance-facts__table--grid">
+                              <tbody>
+                                <tr>
+                                  <td colspan="2">
+                                    Vitamin A
+                                    10%
+                                  </td>
+                                  <td>
+                                    Vitamin C
+                                    0%
+                                  </td>
+                                </tr>
+                                <tr class="thin-end">
+                                  <td colspan="2">
+                                    Calcium
+                                    10%
+                                  </td>
+                                  <td>
+                                    Iron
+                                    6%
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            
+                            <p class="small-info">* Percent Daily Values are based on a 2,000 calorie diet. Your daily values may be higher or lower depending on your calorie needs:</p>
+                            
+                            <table class="performance-facts__table--small small-info">
+                              <thead>
+                                <tr>
+                                  <td colspan="2"></td>
+                                  <th>Calories:</th>
+                                  <th>2,000</th>
+                                  <th>2,500</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th colspan="2">Total Fat</th>
+                                  <td>Less than</td>
+                                  <td>65g</td>
+                                  <td>80g</td>
+                                </tr>
+                                <tr>
+                                  <td class="blank-cell"></td>
+                                  <th>Saturated Fat</th>
+                                  <td>Less than</td>
+                                  <td>20g</td>
+                                  <td>25g</td>
+                                </tr>
+                                <tr>
+                                  <th colspan="2">Cholesterol</th>
+                                  <td>Less than</td>
+                                  <td>300mg</td>
+                                  <td>300 mg</td>
+                                </tr>
+                                <tr>
+                                  <th colspan="2">Sodium</th>
+                                  <td>Less than</td>
+                                  <td>2,400mg</td>
+                                  <td>2,400mg</td>
+                                </tr>
+                                <tr>
+                                  <th colspan="3">Total Carbohydrate</th>
+                                  <td>300g</td>
+                                  <td>375g</td>
+                                </tr>
+                                <tr>
+                                  <td class="blank-cell"></td>
+                                  <th colspan="2">Dietary Fiber</th>
+                                  <td>25g</td>
+                                  <td>30g</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            
+                            <p class="small-info">
+                              Calories per gram:
+                            </p>
+                            <p class="small-info text-center">
+                              Fat 9
+                              &bull;
+                              Carbohydrate 4
+                              &bull;
+                              Protein 4
+                            </p>
+                          </section>
+                      </div>
+                    </div>
+                    </div>
+              </div>
+          </div>
+        </div>
+    <div class="col-md-1"></div>
+  </div>
+</container>
+                <!-- reusable code maybe -->
+            <!-- <div class="page-header t-font">
+              <h1>Welcome User <br>
+              <small>Find new recipes, articles, and your profile here!</small></h1>
+            </div>
+            <div class="boxItem">
+              <div class="row">
+                <div class="col-md-6 b-font">
+                  <h3 id="foodItem">Spaghetti</h3>
+                  <img src="http://images.media-allrecipes.com/userphotos/250x250/3570996.jpg">
+                </div>
+                <div class="col-md-5 nutrInfo b-font"> 
+               <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit laboriosam laborum, maiores iste iure, atque facere esse. Et at nihil in eos sequi, ipsam eveniet fuga, est veniam expedita quibusdam.</p>
+                </div>
+              </div>
+            </div> -->
+  
+<!-- Footer begin -->
+  <footer>
+  <div class="container footercss">
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="footer-block">
+          <ul class="list-inline footer-menu">
+            <li><a href="https://github.com/eXo5/luckyoverlord">Developer site</a></li>
+            <li><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="footer-block text-center">
+          <p class="copyright">
+            Copyright 2016 Overlord. All rights reserved.
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="footer-block">
+          <ul class="list-inline pull-right social-icon">
+            <li><a href=""><i class="fa fa-facebook"></i></a></li>
+            <li><a href=""><i class="fa fa-twitter"></i></a></li>
+            <li><a href=""><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="text/javascript" src="../../public/input.js"></script>
+  
+
+
+
+

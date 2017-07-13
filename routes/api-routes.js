@@ -1,30 +1,69 @@
-//grab db definition for use in route handler.
-//var db = require("../models");
+var path = require("path")
+var db = require("../models");
 
 module.exports = function(app) {
 
-		app.get("/", function(req, res){
+///Show meals on the homepage	
+	app.get("/", function(req, res) {
+		db.Meal.findAll({}).then(function(data) {
+			var hbsObject = {
+				meals: data
+			};
+			res.render("home", hbsObject)
+		})
+	});
 
-				res.render("index", {things: "Stuff"});
-		
+
+//////show userpage
+	app.get("/userpage/:email", function(req, res) {
+		db.User.findOne({
+			where: {
+				email: req.params.email
+			},
+			include:{
+				model: db.Meal
+			}
+		}).then(function(data) {
+			var hbsObject = {
+				users: data,
+				meal: data
+			}
+			console.log(hbsObject)
+			res.render("userpage", hbsObject)
 		});
+	});
 
-		// app.post("/create", function(req, res){
-		// 	db.burgers.create({burger_name: req.body.burgerName})
-		// 	.then(res.redirect("/"));
-		// });
 
-		// app.put("/burger/eat/:burgId", function(req, res){//update function
-		// 	var id = req.params.burgId;
-		// 	db.burgers.update({//db.burgers.update calling the sequelize update function on the db.burgers table.
-		// 		devoured: true
-		// 	},
-		// 	{	
-		// 		where: {
-		// 			id: id
-		// 		}//sequelize knows that it's id key is not the var id lexically defined here.
-		// 	}).then(function(dbPut){
-		// 		res.redirect("/");
-		// 	});
-		// });
+
+/////show input page
+	app.get("/input", function(req, res){
+		res.render("input")
+	});
+
+
+	app.post("/input", function(req, res){
+		db.Meal.create({
+			meal_name: req.body.recipeName,					
+			ingredient1: req.body.ingredient1
+			// ingredient2: req.body.ingredient2
+			// ingredient3: req.body.ingredient3
+			// ingredient4: req.body.ingredient4
+			// ingredient5: req.body.ingredient5
+			// ingredient6: req.body.ingredient6
+			// ingredient7: req.body.ingredient7
+			// ingredient8: req.body.ingredient8
+			// ingredient9: req.body.ingredient9
+			// ingredient10: req.body.ingredient10
+				}).then(function(data){
+					var hbsObject = {
+						meal: data
+					}
+					res.redirect("input", hbsObject);
+					res.end()
+				});
+	})
 }
+
+
+
+
