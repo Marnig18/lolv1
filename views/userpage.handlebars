@@ -77,19 +77,16 @@
         <div class="col-md-1"></div>
         <!-- user info -->
         <div class="col-md-3 b-font">
-           <h1>{{users.name}} <h1>
+           <h1>{{user.name}} <h1>
               
               <img src="http://www.surveyadventure.com/paidsurveys/wp-content/uploads/2010/04/blog-gym1.jpg" alt="gym-in-gym" class="img-thumbnail">
-              <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+              <p> {{user.description}}</p>
               <ul>
-                {{#each user}}
-                <li>{{this.gender}}</li>
-                <li>{{this.month}}{{this.day}}/{{this.year}}</li>
-                <li>Height: {{this.height}} </li>
-                <li>Weight: {{this.weight}} </li>
-                <li> BMI: {{this.BMI}}
-                <li> 
-                  {{/each}}
+                  <li>{{user.gender}}</li>
+                  <li>{{user.month}}/{{user.day}}/{{user.year}}</li>
+                  <li>Height: {{user.height}} </li>
+                  <li>Weight: {{user.weight}} </li>
+                  <li>BMI: {{user.BMI}} 
                 </ul>
              
 
@@ -117,7 +114,7 @@
                {{!--     <h3>{{user.name}}</h3> --}}
                    <div class="row">
                       <ul>
-                        {{#each user.meals}}
+                        {{#each user.Meals}}
                         <li>
                           <div class="col-md-6 b-font">
                             <h3 id="foodItem">{{this.meal_name}}</h3>

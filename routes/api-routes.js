@@ -20,16 +20,15 @@ module.exports = function(app) {
 			where: {
 				email: req.params.email
 			},
-			include:{
-				model: db.Meal
-			}
+			include:[db.Meal]
 		}).then(function(data) {
+			console.log("DATA:" + data);
+
 			var hbsObject = {
-				users: data,
-				meal: data
-			}
-			console.log(hbsObject)
-			res.render("userpage", hbsObject)
+				user: data
+			};
+
+			res.render("userpage", hbsObject);
 		});
 	});
 

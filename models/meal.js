@@ -63,7 +63,7 @@
 			        onDelete: "cascade"
 	    });
 	};
-		return Meal
+		return Meal;
 	};
 
 
