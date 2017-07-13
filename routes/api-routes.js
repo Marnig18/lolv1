@@ -61,10 +61,18 @@ module.exports = function(app) {
 	
 
 	app.post("/user/new", function(req, res){
-		db.User.Create({
-			
-		}).then(function(data){
+		db.User.create({
+			name: req.body.name,
+			email:req.body.email,
+			password: req.body.password,
+			sex: req.body.sex,
+			birthday:req.body.birthday,
+			height: req.body.height,
+			weight: req.body.weight,
 
+		}).then(function(response){
+			
+			res.redirect("/userpage/" + response.email);
 		})
 	})
 
