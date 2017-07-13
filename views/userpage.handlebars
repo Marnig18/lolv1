@@ -71,8 +71,7 @@
 
 
 <!-- Welcome page -->
-
-<container>   
+<div id="main">
   <div class="row">
         <div class="col-md-1"></div>
         <!-- user info -->
@@ -110,8 +109,7 @@
             <div class="boxItem">
               <div class="row">
                 <div class="col-md-6 b-font">
-                  
-               {{!--     <h3>{{user.name}}</h3> --}}
+                   {{!-- <h3>{{user.name}}</h3> --}}
                    <div class="row">
                       <ul>
                         {{#each user.Meals}}
@@ -120,13 +118,13 @@
                             <h3 id="foodItem">{{this.meal_name}}</h3>
                             <img src="http://images.media-allrecipes.com/userphotos/250x250/3570996.jpg">
                           </div>
-                            <div class="col-md-5 nutrInfo b-font">
+                            <div class="col-md-5 nutrInfo" style="margin-left: 20px">
                               <ul>
-                                <li>
-                                  <p>Total Calories: {{this.calories}} </p> 
-                                  <p>Total Fat: {{this.fat}} </p>
-                                  <p>Total Protein: {{this.protein}}</p>
-                                  <p>Total Carbohydrates: {{this.carbs}}</p>
+                                <li style="margin-left: 70px; margin-top: 40px">
+                                  <p> Calories: {{this.calories}} </p> 
+                                  <p> Fat: {{this.fat}} </p>
+                                  <p> Protein: {{this.protein}}</p>
+                                  <p> Carbohydrates: {{this.carbs}}</p>
                                 </li>
                               {{/each}}
                             </ul>
@@ -136,16 +134,14 @@
                       </div>
                     </div>
                    </div> 
-
     <div class="col-md-1"></div>
   </div>
-</container>
+</div>
 
-  
+
 <!-- Footer begin -->
-
-  <footer>
-  <div class="container footercss">
+<footer>
+  <div>
     <div class="row">
       <div class="col-sm-4">
         <div class="footer-block">
@@ -175,4 +171,3 @@
   </div>
 </footer>
 
-<!-- Footer begin -->

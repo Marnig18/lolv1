@@ -76,15 +76,22 @@ font-size: 20px;
 #header-links {
     margin-right: 45px;
 }
+
+#main {
+  height: auto;
+  width: 100%;
+}
 footer {
     background-color: #626E60 ;
     width: 100%;
     padding: 20px;
    padding-bottom: 10px;
    margin-top:20px;
-    bottom: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
-
 #img-margin {
   margin-left: 60px;
 }
