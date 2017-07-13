@@ -5,13 +5,14 @@
 		var Meal = sequelize.define("Meal", {
 			meal_name: {
 				type: DataTypes.STRING,
-				allowNull: false
+				allowNull: false,
+				defaultValue: "Test"
 			},
 			email: {
 				type: DataTypes.STRING,
 			},
 			ingredient1: {
-				type: DataTypes.STRING	
+				type: DataTypes.STRING,
 			},
 			ingredient2: {
 				type: DataTypes.STRING	
