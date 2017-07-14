@@ -71,7 +71,6 @@ module.exports = function(app) {
 			weight: req.body.weight,
 
 		}).then(function(response){
-			
 			res.redirect("/userpage/" + response.email);
 		})
 	})
