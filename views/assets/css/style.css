@@ -4,6 +4,9 @@
     border-bottom: 2px solid #FFF;
     padding: 0;
 }
+#nTable {
+  margin-top: 40px;
+}
 #nav{    
     border: none;
     margin: 0;
