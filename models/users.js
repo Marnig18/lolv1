@@ -14,18 +14,13 @@
 			},
 			picture:{
 				type: DataTypes.STRING,
+				defaultValue:"https://placeimg.com/640/480/animals"
 			},
 			sex: {
 				type: DataTypes.ENUM("male", "female")
 			},
-			month: {
+			birthday: {
 				type: DataTypes.STRING
-			},
-			year: {
-				type: DataTypes.INTEGER
-			},
-			day: {
-				type: DataTypes.INTEGER
 			},
 			height: {
 				type: DataTypes.INTEGER
