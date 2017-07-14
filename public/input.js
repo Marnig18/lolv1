@@ -1,3 +1,4 @@
+
 var counter = 0;
 var nextCals;
 
@@ -165,3 +166,4 @@ $(".meal").on("submit", function() {
     });
 
 });
+

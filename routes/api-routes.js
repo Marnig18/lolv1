@@ -3,39 +3,38 @@ var db = require("../models");
 
 module.exports = function(app) {
 
-    ///Show meals on the homepage	
-    app.get("/", function(req, res) {
-        db.Meal.findAll({}).then(function(data) {
-            var hbsObject = {
-                meals: data
-            };
-            res.render("home", hbsObject)
-        })
-    });
+///Show meals on the homepage	
+	app.get("/", function(req, res) {
+		db.Meal.findAll({}).then(function(data) {
+			var hbsObject = {
+				meals: data
+			};
+			res.render("home", hbsObject)
+		})
+	});
 
 
 
 
-    //////show userpage
-    app.get("/userpage/:email", function(req, res) {
-        db.User.findOne({
-            where: {
-                email: req.params.email
-            },
-            include: {
-                model: db.Meal
-            }
-        }).then(function(data) {
-            var hbsObject = {
-                users: data,
-                meal: data
-            }
-            console.log(hbsObject)
-            res.render("userpage", hbsObject)
-        });
-    });
+//////show userpage
+	app.get("/userpage/:email", function(req, res) {
+		db.User.findOne({
+			where: {
+				email: req.params.email
+			},
+			include:{
+				model: db.Meal
+				}	
+		}).then(function(data) {
+			console.log("DATA:" + data);
 
+			var hbsObject = {
+				user: data
+			};
 
+			res.render("userpage", hbsObject);
+		});
+	});
 
 
 
@@ -74,15 +73,13 @@ module.exports = function(app) {
 			weight: req.body.weight,
 
 		}).then(function(response){
+
+
 			res.redirect("/userpage/" + response.email);
 		})
 	})
 
-
-    /////show input page
-
-
-    app.post("/input", function(req, res) {
+   app.post("/input", function(req, res) {
         db.Meal.create({
             meal_name: req.body.recipeName,
             ingredient1: req.body.ingredient1,
@@ -100,8 +97,6 @@ module.exports = function(app) {
                 meal: data
             }
             res.redirect("/input");
-
         });
-
     })
 }
