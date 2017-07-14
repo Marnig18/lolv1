@@ -8,7 +8,6 @@
         <li><a class="navcolor" href="/" style="color:#FFF;">Home</a></li>
         <li><a class="navcolor" href="/input" style="color:#FFF">Recipe Book</a></li>
          </ul>
-
      <!-- MODAL START -->
       <!-- Button trigger modal -->
      <button type="button" class="btn btn-success btn-lg" id="navSignIn" data-toggle="modal" data-target="#myModal3">
@@ -68,8 +67,6 @@
     </div>
   </div>
 </nav>
-
-
 <!-- Welcome page -->
 <div id="main">
   <div class="row">
@@ -88,7 +85,6 @@
                  {{!--  <li>BMI: {{user.BMI}}  --}}
                 </ul>
              
-
         </div>
         <!-- settings/config options -->
        <!--  <div class="col-md-2 settings">
@@ -107,18 +103,19 @@
               <small>Find new recipes, articles, and your profile here!</small></h1>
             </div>
             <div class="boxItem">
+             
               <div class="row">
-                <div class="col-md-6 b-font">
-                   {{!-- <h3>{{user.name}}</h3> --}}
+                <div class="col-md-7 b-font">
+                   <ul> {{!-- <h3>{{user.name}}</h3> --}}
                    <div class="row">
-                      <ul>
+                     
                         {{#each user.Meals}}
-                        <li>
-                          <div class="col-md-6 b-font">
+                        <li class="listItem" class="col-md-7">
+                          <div {{!-- lass="col-md-6 b-font" --}}>
                             <h3 id="foodItem">{{this.meal_name}}</h3>
                             <img src="http://images.media-allrecipes.com/userphotos/250x250/3570996.jpg">
                           </div>
-                            <div class="col-md-5 nutrInfo" style="margin-left: 20px">
+                            <div {{!-- class="col-md-5 nutrInfo"  --}}style="margin-left: 20px">
                               <ul>
                                 <li style="margin-left: 70px; margin-top: 40px">
                                   <p> Calories: {{this.calories}} </p> 
@@ -126,18 +123,18 @@
                                   <p> Protein: {{this.protein}}</p>
                                   <p> Carbohydrates: {{this.carbs}}</p>
                                 </li>
-                              {{/each}}
-                            </ul>
-                           </li> 
-                          </ul>
+                              </ul>
+                              </li> 
+                            {{/each}}
+                           
+                          
                         </div>
+                        </ul>
                       </div>
-                    </div>
+                  {{!--   </div> --}}
     <div class="col-md-1"></div>
   </div>
 </div>
-
-
 <!-- Footer begin -->
 <footer>
   <div>
@@ -167,6 +164,6 @@
         </div>
       </div>
     </div>
-  </div>
-</footer>
 
+
+</footer>
