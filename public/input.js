@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 var counter = 0;
 var nextCals;
 
@@ -167,4 +166,4 @@ $(".meal").on("submit", function() {
     });
 
 });
->>>>>>> 2e0dd0f65ecc9d7b15d8e3911be2cacdbd029b52
+
