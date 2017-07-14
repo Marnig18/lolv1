@@ -68,23 +68,32 @@
   </div>
 </nav>
 <!-- Welcome page -->
-<div id="main">
+<container>   
   <div class="row">
         <div class="col-md-1"></div>
         <!-- user info -->
-        <div class="col-md-3 b-font">
-           <h1>{{user.name}} <h1>
+        <div class="col-md-3 b-font" style="border-left: 2px solid #EEE">
+           <h1>{{user.name}} </h1>
               
               <img src={{user.picture}} alt="gym-in-gym" class="img-thumbnail">
-             {{!--  <p> {{user.description}}</p> --}}
+              <p> {{user.description}}</p>
               <ul>
+                  <li style="font-weight:bold">Profile Info<li>
                   <li>{{user.gender}}</li>
-               {{!--    <li>{{user.month}}/{{user.day}}/{{user.year}}</li> --}}
+        {{!--           <li>{{user.month}}/{{user.day}}/{{user.year}}</li> --}}
                   <li>Height: {{user.height}} </li>
                   <li>Weight: {{user.weight}} </li>
                  {{!--  <li>BMI: {{user.BMI}}  --}}
                 </ul>
-             
+
+             <!-- Populate an invisible list after the server side api-route call (needed for home.js client side call)-->
+              <ol>
+                <div style="font-weight:bold">Recipes</div>
+                {{#each user.Meals}}
+                  <li class="foodItem" style="margin-left:20px">{{this.meal_name}}</li>
+                {{/each}}
+              </ol>
+
         </div>
         <!-- settings/config options -->
        <!--  <div class="col-md-2 settings">
@@ -97,11 +106,12 @@
             <!-- </ul> -->
         <!-- </div> -->
         <!-- main content -->
-        <div class="col-md-7">
+        <div class="col-md-7" style="border-left: 2px solid #EEE; border-right: 2px solid #EEE">
             <div class="page-header t-font">
               <h1>Welcome  <br>
               <small>Find new recipes, articles, and your profile here!</small></h1>
             </div>
+
             <div class="boxItem">
              
               <div class="row">
@@ -113,7 +123,7 @@
                         <li class="listItem" class="col-md-7">
                           <div {{!-- lass="col-md-6 b-font" --}}>
                             <h3 id="foodItem">{{this.meal_name}}</h3>
-                            <img src="http://images.media-allrecipes.com/userphotos/250x250/3570996.jpg">
+                           <div class="col-md-6 b-font" id='addGif'>
                           </div>
                             <div {{!-- class="col-md-5 nutrInfo"  --}}style="margin-left: 20px">
                               <ul>
@@ -135,6 +145,23 @@
     <div class="col-md-1"></div>
   </div>
 </div>
+
+    {{!--   <div class="page-header t-font">
+              <h1>Welcome  <br>
+              <small>Find new recipes, articles, and your profile here!</small></h1>
+            </div>
+            <div>
+              <div class="row">
+                <div class="col-md-6 b-font" id='addGif'>                               
+                </div>
+              </div>
+            </div>   
+        </div>
+        <div class="col-md-1"></div>
+  </div>
+</container> --}}
+
+
 <!-- Footer begin -->
 <footer>
   <div>
