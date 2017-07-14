@@ -22,7 +22,9 @@ module.exports = function(app) {
 			where: {
 				email: req.params.email
 			},
-			include:[db.Meal]
+			include:{
+				model: db.Meal
+				}	
 		}).then(function(data) {
 			console.log("DATA:" + data);
 
@@ -71,6 +73,8 @@ module.exports = function(app) {
 			weight: req.body.weight,
 
 		}).then(function(response){
+
+
 			res.redirect("/userpage/" + response.email);
 		})
 	})
